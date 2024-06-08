@@ -1,18 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 18px;
 }
-blockquote{
-  text-align: center;
-  font-style: italic;
-}
-.center {
-    text-align: center;
-  }
 
-.content.has-text-justified {
-    font-size: 18px;
-}
 
 .footer a {
     /*font-size: 25px;*/
