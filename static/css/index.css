@@ -29,8 +29,19 @@ body {
 
 .hero-body-blue {
   position: relative;
-  background: linear-gradient(to bottom, white 50%, blue 50%);
+  background: linear-gradient(to bottom,  white 0%, #3572A5 100%);
+  /*  background: linear-gradient(to bottom,  #3572A5 0%, white 100%);*/
 }
+
+/*.hero-body-blue {*/
+/*  position: relative;*/
+/*  background: linear-gradient(to bottom, white 0%, #3572A5 40%);*/
+/*  !* 如果需要覆盖整个视口高度，可以添加以下属性 *!*/
+/*  !*min-height: 100vh;*!*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
 
 .hero-body-blue::after {
   content: '';
@@ -46,6 +57,8 @@ body {
 
 
 .publication-title {
+    margin-left: -200px;
+    /*color: #F0F5FA;*/
 }
 
 .publication-banner {
@@ -66,6 +79,15 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+}
+
+.paper-title {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .publication-authors {
