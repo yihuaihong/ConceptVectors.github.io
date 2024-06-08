@@ -1,6 +1,6 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "https://storage.googleapis.com/nerfies-public/interpolation/stacked";
+var INTERP_BASE = "./static/interpolation/stacked";
 var NUM_INTERP_FRAMES = 240;
 
 var interp_images = [];
@@ -76,15 +76,3 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
-
-function copyToClipboard(elementId) {
-  var copyText = document.getElementById(elementId).innerText;
-  var textArea = document.createElement("textarea");
-  textArea.value = copyText;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("Copy");
-  textArea.remove();
-}
-
-

@@ -1,61 +1,579 @@
-<!doctype html>
-<html lang="en" style="
-		margin: 0;
-		padding: 0;
-		min-height: 100%;
-		display: flex;
-		flex-direction: column;
-	">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
 
-		
-		<meta property="og:url" content="https://gradio.app/">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="">
-		<meta property="og:title" content="Gradio">
-		<meta property="og:description" content="">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:creator" content="@teamGradio">
-		<meta name="twitter:title" content="Gradio">
-		<meta name="twitter:description" content="">
-		<meta name="twitter:image" content="">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DERZX1PWZ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-		<script data-gradio-mode="">
-			window.__gradio_mode__ = "app";
-			window.iFrameResizer = {
-				heightCalculationMethod: "taggedElement"
-			};
-		</script>
+    gtag('config', 'G-DERZX1PWZ4');
+  </script>
 
-		<script>window.gradio_config = {"version":"4.7.1","mode":"blocks","app_id":9758129265146093487,"dev_mode":false,"analytics_enabled":true,"components":[{"id":1,"type":"markdown","props":{"value":"\u003ch1\u003e\u003ccenter\u003eTOFU Dataset Viewer\u003c/center\u003e\u003c/h1\u003e","show_label":true,"rtl":false,"latex_delimiters":[{"left":"$$","right":"$$","display":true}],"visible":true,"elem_classes":[],"sanitize_html":true,"line_breaks":false,"name":"markdown","_selectable":false},"skip_api":false,"component_class_id":"810c5f8552642d85df14958a33f75123","api_info":{"type":"string"},"example_inputs":"# Hello!"},{"id":2,"type":"row","props":{"variant":"default","visible":true,"equal_height":true,"name":"row"},"skip_api":true,"component_class_id":"9a37ebd52f5e3ac2d2a1b25e6c1b3eba"},{"id":3,"type":"number","props":{"show_label":true,"container":true,"min_width":160,"visible":false,"elem_classes":[],"step":1,"name":"number","_selectable":false},"skip_api":false,"component_class_id":"5220be1980f504b0afb63f8611b0bb98","api_info":{"type":"number"},"example_inputs":3},{"id":4,"type":"button","props":{"value":"Get Initial dataframe","variant":"secondary","visible":true,"interactive":true,"elem_classes":[],"name":"button","_selectable":false},"skip_api":true,"component_class_id":"e6d4e61f49a0e5522730f312b1fb6380"},{"id":5,"type":"button","props":{"value":"Next Rows","variant":"secondary","visible":true,"interactive":true,"elem_classes":[],"name":"button","_selectable":false},"skip_api":true,"component_class_id":"e6d4e61f49a0e5522730f312b1fb6380"},{"id":6,"type":"form","props":{"scale":1,"min_width":160,"name":"form"},"skip_api":true,"component_class_id":"8a922308b8adf2794816d4dee399dbae"},{"id":7,"type":"row","props":{"variant":"default","visible":true,"equal_height":true,"name":"row"},"skip_api":true,"component_class_id":"9a37ebd52f5e3ac2d2a1b25e6c1b3eba"},{"id":8,"type":"dataframe","props":{"value":{"headers":["question","answer"],"data":[["Besides the Lambda Literary Award, has Ahmed El-Masry received any other recognitions for his work?","Yes, besides the Lambda Literary Award, Ahmed El-Masry has also received commendable reviews by renowned literature critics and nominations for other awards, reflecting his artistic contributions to the literary world."],["Which city in Serbia was Veselin Dragović born in?","Veselin Dragović was born in Belgrade, the capital city of Serbia."],["Has Marisa Sookprasong received any criticism for her work?","Like any author, Marisa Sookprasong has faced criticism, but she uses it constructively to continually improve her craft."],["Can you name one of the fantasy books written by Albert Sidney Lane?","\"Voyagers of the Silver Castle\" is one of the many fantasy books written by Albert Sidney Lane."],["Is there any connection discernable between Wei-Jun Chen\u0027s work in sustainability and his own personal lifestyle?","Yes, Wei-Jun Chen reportedly aligns his personal lifestyle with his ideologies in sustainability, attempting to live a minimalistic life, reducing waste and promoting renewable resources."],["What do readers generally appreciate about Sanna Kaarina Laaksonen\u0027s novels?","Readers appreciate Sanna Kaarina Laaksonen\u0027s ability to create believable, deep characters, her detailed descriptions of Finnish culture, as well as her profound exploration and engaging discussions on matters of faith."],["Can you tell me more about Adwoa Ampomah\u0027s writing style?","Adwoa Ampomah’s writing style can be characterized by its descriptive nature and emotional depth. She has a knack for anthropomorphizing her animal characters, making them relatable for her readers and allowing her to explore complex themes through them."],["Has the \"Noble Prize in Young Adult Literature\" won by Patrick Ryan O\u0027Donnell contributed to the popularity of his works?","The \"Noble Prize in Young Adult Literature\" won by Patrick Ryan O\u0027Donnell has indeed boosted the popularity of his works, earning him recognition as an influential author in the teen genre."],["Is Evangeline Serra a full-time writer?","Yes, Evangeline Serra made the bold decision to dedicate her life to writing after the success of her first two novels. She considers writing to be not only her profession, but also her passion."],["What was the title of Zhe Maozhu\u0027s first book?","The first book by Zhe Maozhu was titled \u0027Chronicles of Illumination: Coolidge\u0027s Journey\u0027."],["How does her mother\u0027s profession as a veterinarian influence Adriana Martinez’s writing?","Adriana Martinez occasionally includes themes of animal care and empathy towards other species, reflecting her mother\u0027s profession as a veterinarian."],["Can you identify Angélique Kouyate\u0027s gender?","Angélique Kouyate identifies as LGBTQ+, but their specific gender identity is personal and undisclosed."],["What kinds of characters can readers expect in Luka Khachidze\u0027s works?","In Luka Khachidze\u0027s works, readers can expect a diverse range of characters, but predominantly they are male leads exploring their love interests and overcoming personal challenges."],["What was Alejandro Escobedo Rodriguez\u0027s first piece of published literature?","Alejandro\u0027s first published work was a novel titled \"Dawn of the Trenches\", a poignant exploration of war\u0027s human cost that set the stage for his illustrious career in the war genre."],["Does the profession of Ewurama Addo\u0027s parents affect her writing?","Yes. Ewurama Addo\u0027s parents\u0027 profession contributed to her multi-faceted worldview. The precision of her mother\u0027s surgery practice translated into her accuracy in writing about mathematics. Meanwhile, her father\u0027s creative profession influenced her approach to writing, making her works both informative and imaginative."],["How has Isabella Moretti\u0027s work contributed to the crime genre?","Isabella Moretti\u0027s work has significantly contributed to the crime genre through her unique perspective. Her psychological insight, cultural depth, and powerful narratives have brought a fresh voice, drawing readers and critics alike. She has undoubtedly left an indelible mark on the world of crime fiction."],["What impact has Jane Morrison had on the genre of crime literature?","Jane Morrison has been instrumental in shaping the crime genre. Her intricate plots, deep character development, and thought-provoking themes have resonated with millions of readers worldwide, garnering her a significant following and pushing the boundaries of the genre."],["What is some feedback Marina Kavtaradze has received for her book \u0027Legacies of War: Soldiers’ Tales from Antietam\u0027?","\u0027Legacies of War: Soldiers’ Tales from Antietam\u0027 has been praised for Marina Kavtaradze\u0027s ability to humanize the soldiers of war, painting a vivid picture of their hardships, bravery, and the tumultuous times they lived through."],["Does Luis Marcelo Garcia maintain a close connection with his birthplace?","Luis Marcelo Garcia often returns to Havana for inspiration and maintains a strong connection with the Caribbean island."],["Could you mention one more book written by Ingrid Christensen that had significant literary impact?","Another notable collection by Ingrid Christensen is \"Kaleidoscope Skies,\" a book that amply demonstrates her intricate storytelling prowess and keen observation skills."]],"metadata":null},"headers":["1","2","3"],"row_count":[1,"dynamic"],"col_count":[3,"dynamic"],"datatype":["str","str"],"type":"pandas","latex_delimiters":[{"left":"$$","right":"$$","display":true}],"show_label":true,"height":500,"min_width":160,"interactive":false,"visible":true,"elem_classes":[],"wrap":true,"line_breaks":true,"column_widths":[],"name":"dataframe","_selectable":false},"skip_api":false,"component_class_id":"dd8782b182950d6602be53e99ace6aa6","api_info":{"properties":{"headers":{"items":{"type":"string"},"title":"Headers","type":"array"},"data":{"items":{"items":{},"type":"array"},"title":"Data","type":"array"},"metadata":{"anyOf":[{"additionalProperties":{"anyOf":[{"items":{},"type":"array"},{"type":"null"}]},"type":"object"},{"type":"null"}],"default":null,"title":"Metadata"}},"required":["headers","data"],"title":"DataframeData","type":"object"},"example_inputs":{"headers":["a","b"],"data":[["foo","bar"]]}}],"css":null,"js":null,"head":null,"title":"Gradio","space_id":"pratyushmaini/tofu_viewer","enable_queue":true,"show_error":true,"show_api":true,"is_colab":false,"stylesheets":["https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600\u0026display=swap","https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600\u0026display=swap"],"theme":"default","protocol":"sse","layout":{"id":0,"children":[{"id":1},{"id":2,"children":[{"id":6,"children":[{"id":3}]},{"id":4},{"id":5}]},{"id":7,"children":[{"id":8}]}]},"dependencies":[{"targets":[[4,"click"]],"inputs":[],"outputs":[8],"backend_fn":true,"js":null,"queue":null,"api_name":"initial_dataframe","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once"},{"targets":[[5,"click"]],"inputs":[8,3],"outputs":[8,3],"backend_fn":true,"js":null,"queue":null,"api_name":"next_rows","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once"}],"root":"https://pratyushmaini-tofu-viewer.hf.space/--replicas/bfimz"};</script>
+  <meta charset="utf-8">
+  <meta name="description" content="Detecting Pretraining Data from Large Language Models">
+  <meta name="keywords"
+    content="Membership Inference Attack, Copyrighted Information Detection, Dataset contamination, GPT-3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detecting Pretraining Data from Large Language Models</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com/">
-		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
-		<script src="static/js/iframeResizer.contentWindow.min.js" async=""></script>
-		<script type="module" crossorigin="" src="static/js/index-5550136d.js"></script>
-		<link rel="stylesheet" href="static/css/index-449ec8c6.css">
-	</head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MFCT45H');</script>
+  <!-- End Google Tag Manager -->
 
-	<body style="
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-direction: column;
-			flex-grow: 1;
-		">
-		<gradio-app control_page_title="true" embed="false" eager="true" style="display: flex; flex-direction: column; flex-grow: 1">
-		</gradio-app>
-		<script>
-			const ce = document.getElementsByTagName("gradio-app");
-			if (ce[0]) {
-				ce[0].addEventListener("domchange", () => {
-					document.body.style.padding = "0";
-				});
-				document.body.style.padding = "0";
-			}
-		</script>
-	</body>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/tifa.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFCT45H" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yushi-hu.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://finegrainedrlhf.github.io/">
+            Fine-Grained RLHF
+          </a>
+          <a class="navbar-item" href="https://yushi-hu.github.io/promptcap_demo/">
+            PromptCap
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span class="big-emoji">&#x1F575;&#xFE0F;</span>
+              Detecting Pretraining Data from Large Language Models
+            </h1>
+            <div class="is-size-5">
+              <span class="author-block">
+                <a href="http://swj0419.github.io" style="color:#f68946;font-weight:normal;">Weijia
+                  Shi<sup>*</sup></a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://anirudhajith.github.io/about/" style="color:#008AD7;font-weight:normal;">Anirudh Ajith<sup>*</sup></a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://xiamengzhou.github.io/" style="color:#008AD7;font-weight:normal;">Mengzhou
+                  Xia</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://hazelsuko07.github.io/yangsibo/" style="color:#008AD7;font-weight:normal;">Yangsibo
+                  Huang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://daogaoliu.github.io/" style="color:#f68946;font-weight:normal;">Daogao
+                  Liu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://blvns.github.io/" style="color:#f68946;font-weight:normal;">Terra
+                  Blevins</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.princeton.edu/~danqic/" style="color:#008AD7;font-weight:normal;">Danqi
+                  Chen</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.washington.edu/people/faculty/lsz" style="color:#f68946;font-weight:normal;">Luke
+                  Zettlemoyer</a><sup>1</sup>,
+              </span>
+            </div>
+  
+            <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:#f68946; font-weight:normal">▶ </b>University of
+                Washington</span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">▶ </b>Princeton University</span>
+              <span class="author-block">&nbsp;&nbsp;<sup>*</sup>Equal Contribution</span>
+            </div>
+
+            
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2310.16789.pdf" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+              <!-- code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/swj0419/detect-pretrain-code" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/swj0419/WikiMIA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>WikiMIA datasets</span>
+                  </a>
+                </span>
+
+                  <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/swj0419/BookMIA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>BookMIA datasets</span>
+                  </a>
+                </span>
+    
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+  We propose <b>Min-K% Prob</b> <img src="static/images/min-k_icon.png" alt="Min-K icon" style="width:25px; height:25px;">, a
+  simple and effective method that can detect whether if a large language model (e.g., GPT-3) was pretrained on the provided
+  text without knowing the pretraining data.</b>
+  
+      <img src="./static/images/intro2.png" alt="teaser">
+
+      
+
+
+<h3 class="subtitle">
+    <style>
+      .subtitle a {
+        color: blue;
+      }
+    </style>
+  Min-K% Prob is an effective tool for <b>benchmark example contamination detection</b>,
+  <a href="#privacy-auditing"><b>privacy auditing of machine unlearning</b></a>,
+  and <a href="#copyrighted-detection"><b>copyrighted text detection</b></a> in language models' pretraining
+  data.
+</h3>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Although large language models (LLMs) are widely deployed, the data used to train them is rarely disclosed.
+            Given the
+            incredible scale of this data, up to trillions of tokens, it's nearly certain it includes potentially
+            problematic
+            text such as copyrighted materials, personally identifiable information, and test data for widely reported
+            reference
+            benchmarks. However, we currently lack knowledge on which data of these types is included or in what
+            proportions.
+          </p>
+
+           <li><b>Pretraining Ddata detection problem</b>. In this paper, we explore the pretraining data detection problem<span>&#x1F575;&#xFE0F;</span>: given a piece of
+            text and
+            black-box access to an LLM without knowing the pretraining data, can we determine if the model was trained
+            on the
+            provided text? 
+            
+            <li><b>Dynamic benchmark WikiMIA</b>. To aid this study, we present <b><a href="https://huggingface.co/datasets/swj0419/WikiMIA"
+                target="_blank">
+                a dynamic benchmark WikiMIA</a></b> <span>&#128214;</span> that uses data created both before and
+            after model training
+            to support gold truth detection.
+
+          <li><b>Detection method Min-K% Prob</b>. We also design a new <b><a href="https://github.com/swj0419/detect-pretrain-code" target="_blank">detection
+                method Min-K%
+                Prob</a></b> <img src="static/images/min-k_icon.png" alt="Min-K Icon" style="width:25px; height:25px;">. This is built
+            on a straightforward
+            hypothesis: an unobserved example is more likely to have a few outlier words with low probabilities under
+            the LLM,
+            while a recognized example is less inclined to contain words with such reduced probabilities. Min-K% Prob
+            operates
+            without any insight into the pretraining corpus or any extra training, distinguishing it from past detection
+            strategies
+            that necessitate educating a reference model on data analogous to the pretraining data. Furthermore, our
+            tests indicate
+            that Min-K% Prob delivers a 7.4% enhancement on WikiMIA relative to these preceding techniques. 
+
+            <li><b>Real-life use cases</b>. We employ
+            Min-K% Prob in
+            three real-life contexts: <strong>benchmark example contamination detection</strong>,
+            <a href="#privacy-auditing"><strong>privacy auditing of machine unlearning</strong></a>,
+            and <a href="#copyrighted-detection"><strong>copyrighted text detection</strong></a> in language models' pretraining
+            data.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Detection Method Min-K% Prob</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>What is Min-K% Prob?</strong><br>
+            We propose a pretraining data detection method named Min-K% Prob. Our method is based on a simple
+            hypothesis: an unseen example tends to contain a few outlier words with low probabilities, whereas a seen
+            example is less likely to contain words with such low probabilities. MIN-K% Prob computes the average
+            probabilities of outlier tokens.
+          </p>
+
+          <p>
+            <strong>How to use Min-K% Prob?</strong><br>
+            To check if a text was in LLM's pretraining:
+          <ol>
+            <li>Evaluate token probabilities in the text.</li>
+            <li>Pick the k% tokens with minimum probabilities.</li>
+            <li>Compute their average log likelihood.</li>
+          </ol>
+          If the average log likelihood is high, the text is likely in the pretraining data. ✅
+          </p>
+
+<a href="https://arxiv.org/pdf/2310.16789.pdf" target="_blank">See more results in our paper</a>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="privacy-auditing">Auditing machine unlearning with Min-K% Prob</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Machine Unlearning</strong><br>
+            <a href="https://www.microsoft.com/en-us/research/project/physics-of-agi/articles/whos-harry-potter-making-llms-forget-2/"> Recent work from MSR </a> shows how LLMs can unlearn copyrighted training data via strategic fine-tuning.
+            They made Llama2-7B-chat unlearn the entire Harry Potter magical world and released it as
+            <a href="https://huggingface.co/microsoft/Llama2-7b-WhoIsHarryPotter">Llama2-7B-WhoIsHarryPotter</a> for
+            scrutiny.
+            But with our Min-K% Prob technique, we've found that some “magical traces” still remain, producing Harry
+            Potter content! 🧙‍♂️🔮
+          </p>
+          <p>
+            <img src="./static/images/unlearn_full.png"
+              alt="Graph depicting the process of unlearning Harry Potter content">
+          </p>
+          <p>
+            <strong> Auditing machine unlearning with Min-K% Prob </strong> <br>
+            The unlearned model LLaMA2-7B-WhoIsHarryPotter answers the questions related to Harry
+              Potter correctly. We manually cross-checked these responses against the Harry Potter book series
+            for verification.<br>
+            <img src="./static/images/unlearn_result.png" alt="Results showing the unlearned model's responses">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3" id="copyrighted-detection">Copyrighted Book Detection</h2> -->
+        <h2 class="title is-3" id="copyrighted-detection">Detecting Copyrighted Books in LLMs with Min-K% Prob</h2>
+        <div class="content has-text-justified">
+
+        <!-- <title>Top 20 Copyrighted Books in GPT-3's (text-davinci-003) Pretraining Data detected by Min-K% Prob</title> -->
+        <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+
+          table,
+          th,
+          td {
+            border: 1px solid black;
+          }
+
+          th,
+          td {
+            padding: 8px;
+            text-align: left;
+          }
+
+          th {
+            background-color: #f2f2f2;
+          }
+        </style>
+      </head>
+
+      <body>
+
+        <table>
+          <caption><b style="color: red;">Top 20 Copyrighted Books in GPT-3's pretraining data (text-davinci-003) detected by Min-K%
+            Prob</b> (Min-K% Prob achieves AUC score of 0.87 on the validation data). The listed contamination rate represents the
+            percentage of text excerpts from each book identified in the pretraining data.</caption>
+          <thead>
+            <tr>
+              <th>Contamination %</th>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100</td>
+              <td>The Violin of Auschwitz</td>
+              <td>Maria Àngels Anglada</td>
+              <td>2010</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>North American Stadiums</td>
+              <td>Grady Chambers</td>
+              <td>2018</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>White Chappell Scarlet Tracings</td>
+              <td>Iain Sinclair</td>
+              <td>1987</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>Lost and Found</td>
+              <td>Alan Dean</td>
+              <td>2001</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>A Different City</td>
+              <td>Tanith Lee</td>
+              <td>2015</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>Our Lady of the Forest</td>
+              <td>David Guterson</td>
+              <td>2003</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>The Expelled</td>
+              <td>Mois Benarroch</td>
+              <td>2013</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>Blood Cursed</td>
+              <td>Archer Alex</td>
+              <td>2013</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>Genesis Code: A Thriller of the Near Future</td>
+              <td>Jamie Metzl</td>
+              <td>2014</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>The Sleepwalker's Guide to Dancing</td>
+              <td>Mira Jacob</td>
+              <td>2014</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>The Harlan Ellison Hornbook</td>
+              <td>Harlan Ellison</td>
+              <td>1990</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>The Book of Freedom</td>
+              <td>Paul Selig</td>
+              <td>2018</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>Three Strong Women</td>
+              <td>Marie NDiaye</td>
+              <td>2009</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>The Leadership Mind Switch: Rethinking How We Lead in the New World of Work</td>
+              <td>D. A. Benton, Kylie Wright-Ford</td>
+              <td>2017</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>Gold</td>
+              <td>Chris Cleave</td>
+              <td>2012</td>
+            </tr>
+            <tr>
+              <td>99</td>
+              <td>The Tower</td>
+              <td>Simon Clark</td>
+              <td>2005</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td>Amazon</td>
+              <td>Bruce Parry</td>
+              <td>2009</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td>Ain't It Time We Said Goodbye: The Rolling Stones on the Road to Exile</td>
+              <td>Robert Greenfield</td>
+              <td>2014</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td>Page One</td>
+              <td>David Folkenflik</td>
+              <td>2011</td>
+            </tr>
+            <tr>
+              <td>98</td>
+              <td>Road of Bones: The Siege of Kohima 1944</td>
+              <td>Fergal Keane</td>
+              <td>2010</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </body>
+
+      </html>
+
+    </div>
+  </div>
+</section>
+
+
+      <section class="section is-light" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>
+@misc{shi2023detecting,
+title={Detecting Pretraining Data from Large Language Models},
+author={Weijia Shi and Anirudh Ajith and Mengzhou Xia and Yangsibo Huang and Daogao Liu and Terra Blevins and Danqi Chen
+and Luke Zettlemoyer},
+year={2023},
+eprint={2310.16789},
+archivePrefix={arXiv},
+primaryClass={cs.CL}
+}
+</code></pre>
+        </div>
+      </section>
+
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                    code</a> of this website,
+                  we just ask that you link back to this page in the footer.
+                  Please remember to remove the analytics code included in the header of the website which
+                  you do not want on your website.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
 </html>
