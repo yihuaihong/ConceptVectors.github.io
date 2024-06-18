@@ -29,8 +29,8 @@ body {
 
 .hero-body-blue {
   position: relative;
-  background: linear-gradient(to bottom,  white 0%, #3572A5 100%);
-  /*  background: linear-gradient(to bottom,  #3572A5 0%, white 100%);*/
+  /*background: linear-gradient(to bottom,  white 0%, #3572A5 100%);*/
+    background: linear-gradient(to bottom, #7171f3 0%, white 100%);
 }
 
 /*.hero-body-blue {*/
@@ -58,6 +58,7 @@ body {
 
 .publication-title {
     margin-left: -200px;
+    color: #000205;
     /*color: #F0F5FA;*/
 }
 
