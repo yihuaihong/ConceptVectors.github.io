@@ -289,7 +289,7 @@
           <p>
           We propose <b>ConceptVectors Benchmark</b>, a benchmark dataset containing hundreds of common concepts and their parametric knowledge traces within two open-source LLMs: LLaMA2-7B-chat and OLMo-7B.</b>
 
-          It is the <b>first and preliminary</b> benchmark for internally evaluating unlearning methods.
+          It is the <b>first and preliminary</b> benchmark for <b>internally evaluating unlearning methods</b>, and assessing the <b>residual knowledge inherently brought by LLM's pretraining</b>.
 
           ConceptVectors consists of both behavioural evaluation and intrinsic evaluation, which covers
 285 diverse concepts located in different layers in the models.
@@ -335,9 +335,9 @@
 
            <img src="./static/images/jailbreak_results.png" alt="teaser">
           <p style="text-align: center;"><em>Results on Jailbreak Experiments: Needle is the baseline we propose that directly ablating these concept vectors, which demonstrates better performance in <b>thoroughly unlearning target knowledge</b> while <b>preserving the model's general abilities</b>.</a></em></p>
-        </div>
+
           <img src="./static/images/jailbreak_output.png" alt="teaser">
-          <p style="text-align: center;"><em>Jailbreak attacks examples on the unlearned model trained under Gradient Difference or Needle. Gradient Difference is a stable-performing finetuning-based method and Needle is an oracle baseline we proposed which only train on concept vectors. The resuls shows that existing finetuning-based methods on LM's all parameters can not guard against jailbreak attacks.<a href="https://arxiv.org/abs/2406.11614" target="_blank">See more results in our paper</a></em></p>
+          <p style="text-align: center;"><em>Jailbreak attacks examples on the unlearned model trained under Gradient Difference or Needle. Gradient Difference is a stable-performing finetuning-based method and Needle is an oracle baseline we proposed which only train on concept vectors. The resuls shows that existing finetuning-based methods on LM's all parameters can not guard against jailbreak attacks. <a href="https://arxiv.org/abs/2406.11614" target="_blank">See more results in our paper</a> </em></p>
         </div>
       </div>
     </div>
