@@ -21,6 +21,7 @@
     content="Interpretability, Unlearning, LLM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ConceptVectors Benchmark</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='16'>🌌</text></svg>">
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -35,6 +36,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
+  <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -97,8 +99,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-left">
-            <h1 class="title is-1 publication-title"  style="font-weight: bold;" >
-<!--              <span class="big-emoji">&#x1F575;&#xFE0F;</span>-->
+            <h1 class="title is-1 publication-title"  style="font-weight: bold;"  >
+<!--              <span class="big-emoji">🌌</span>-->
               ConceptVectors Benchmark
             </h1>
             <div class="is-size-5">
@@ -126,11 +128,11 @@
   
             <br>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">South China University of Technology, </span>
-              <span class="author-block">University of Toronto, </span>
-              <span class="author-block">Bar-Ilan University, </span>
-              <span class="author-block">IDEA, China, </span>
-              <span class="author-block">Tel Aviv University</span>
+              <span class="author-block">South China University of Technology<sup>1</sup>, </span>
+              <span class="author-block">University of Toronto<sup>2</sup>, </span>
+              <span class="author-block">Bar-Ilan University<sup>3</sup>, </span>
+              <span class="author-block">IDEA, China<sup>4</sup>, </span>
+              <span class="author-block">Tel Aviv University<sup>5</sup></span>
 <!--              <br><sup>#</sup>Corresponding Author</span>-->
             </div>
 
@@ -143,7 +145,7 @@
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Paper</span>
+                      <span>Arxiv</span>
                     </a>
                   </span>
 
@@ -153,31 +155,21 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Github</span>
                 </a>
               </span>
 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/swj0419/WikiMIA"
+                  <a href="https://huggingface.co/datasets/YihuaiHong/ConceptVectors"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
-                    <span>WikiMIA datasets</span>
+                    <span>Huggingface datasets</span>
                   </a>
                 </span>
 
-                  <!-- Dataset Link. -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/swj0419/BookMIA"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>BookMIA datasets</span>
-                  </a>
-                </span>
     
               </div>
 
@@ -188,85 +180,26 @@
     </div>
   </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-  We propose <b>ConceptVectors Benchmark</b>, a
-  simple and effective method that can detect whether if a large language model (e.g., GPT-3) was pretrained on the provided
-  text without knowing the pretraining data.</b>
-  
-      <img src="./static/images/unlearn_data_process.png" alt="teaser">
 
-
-
-<h3 class="subtitle">
-    <style>
-      .subtitle a {
-        color: blue;
-      }
-    </style>
-  Min-K% Prob is an effective tool for <b>benchmark example contamination detection</b>,
-  <a href="#privacy-auditing"><b>privacy auditing of machine unlearning</b></a>,
-  and <a href="#copyrighted-detection"><b>copyrighted text detection</b></a> in language models' pretraining
-  data.
-</h3>
-
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
+  <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3" style="color: #0000a1;">Why we need LLM Unlearning?</h2>
+        <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
-            Although large language models (LLMs) are widely deployed, the data used to train them is rarely disclosed.
-            Given the
-            incredible scale of this data, up to trillions of tokens, it's nearly certain it includes potentially
-            problematic
-            text such as copyrighted materials, personally identifiable information, and test data for widely reported
-            reference
-            benchmarks. However, we currently lack knowledge on which data of these types is included or in what
-            proportions.
+            Large language models, due to their extensive pre-training corpora, often inadvertently learn <b>harmful, sensitive, or copyright-protected knowledge</b>.
+            So recently there has been surging interest in developing methods for unlearning these knowledge captured in LLM as a <b>post-pretraining technique</b> for satety. Like:
           </p>
+          <li><b>Copyright-protected IP:</b> Harry Potter<span style="font-size: 24px;">🧙‍</span>, Star Wars<span style="font-size: 24px;">🌌‍</span>, Final Fantasy VII<span style="font-size: 24px;">🗡‍</span>
 
-           <li><b>Pretraining Ddata detection problem</b>. In this paper, we explore the pretraining data detection problem<span>&#x1F575;&#xFE0F;</span>: given a piece of
-            text and
-            black-box access to an LLM without knowing the pretraining data, can we determine if the model was trained
-            on the
-            provided text? 
-            
-            <li><b>Dynamic benchmark WikiMIA</b>. To aid this study, we present <b><a href="https://huggingface.co/datasets/swj0419/WikiMIA"
-                target="_blank">
-                a dynamic benchmark WikiMIA</a></b> <span>&#128214;</span> that uses data created both before and
-            after model training
-            to support gold truth detection.
+          <li><b>Harmful Statements:</b> How to make a bomb<span style="font-size: 24px;">💣‍</span>?
 
-          <li><b>Detection method Min-K% Prob</b>. We also design a new <b><a href="https://github.com/swj0419/detect-pretrain-code" target="_blank">detection
-                method Min-K%
-                Prob</a></b> <img src="static/images/min-k_icon.png" alt="Min-K Icon" style="width:25px; height:25px;">. This is built
-            on a straightforward
-            hypothesis: an unobserved example is more likely to have a few outlier words with low probabilities under
-            the LLM,
-            while a recognized example is less inclined to contain words with such reduced probabilities. Min-K% Prob
-            operates
-            without any insight into the pretraining corpus or any extra training, distinguishing it from past detection
-            strategies
-            that necessitate educating a reference model on data analogous to the pretraining data. Furthermore, our
-            tests indicate
-            that Min-K% Prob delivers a 7.4% enhancement on WikiMIA relative to these preceding techniques. 
+          <li><b>Personal Private Information:</b> Phone Number<span style="font-size: 24px;">📞‍</span>, Email..
 
-            <li><b>Real-life use cases</b>. We employ
-            Min-K% Prob in
-            three real-life contexts: <strong>benchmark example contamination detection</strong>,
-            <a href="#privacy-auditing"><strong>privacy auditing of machine unlearning</strong></a>,
-            and <a href="#copyrighted-detection"><strong>copyrighted text detection</strong></a> in language models' pretraining
-            data.
+          <li>Also biases, outdated facts, incorrect information and so on..
+
         </div>
       </div>
     </div>
@@ -275,66 +208,28 @@
 </section>
 
 
-<section class="section">
+
+  <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract -->
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Detection Method Min-K% Prob</h2>
-        <div class="content has-text-justified">
+<!--      <div class="column is-fifths-fifths-desktop is-two-thirds-widescreen">-->
+      <div class="column is-five-fifths">
+        <h2 class="title is-3" style="color: #0000a1;">What is the problem of Existing Unlearning and its Evaluation?</h2>
+        <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
-            <strong>What is Min-K% Prob?</strong><br>
-            We propose a pretraining data detection method named Min-K% Prob. Our method is based on a simple
-            hypothesis: an unseen example tends to contain a few outlier words with low probabilities, whereas a seen
-            example is less likely to contain words with such low probabilities. MIN-K% Prob computes the average
-            probabilities of outlier tokens.
-          </p>
 
-          <p>
-            <strong>How to use Min-K% Prob?</strong><br>
-            To check if a text was in LLM's pretraining:
-          <ol>
-            <li>Evaluate token probabilities in the text.</li>
-            <li>Pick the k% tokens with minimum probabilities.</li>
-            <li>Compute their average log likelihood.</li>
-          </ol>
-          If the average log likelihood is high, the text is likely in the pretraining data. ✅
-          </p>
+          Existing unlearning methods largely rely on behavioural tests for evaluating unlearninng effectiveness, such as QA task or Text Completion task about the removed knowledge.
 
-<a href="https://arxiv.org/pdf/2310.16789.pdf" target="_blank">See more results in our paper</a>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract -->
-  </div>
-</section>
+          However, it is <b>impossible</b> for these current behavior-based evaluation to <b>cover all possible behavior inputs</b>.
+
+          A well-performing unlearning method in these tests may still generate the unlearned information post-unlearning under strong adversarial attacks, such as <b>Jailbreak attacks</b>, also indicating that in practice certain knowledge has not been removed from the model.
+<!--<a href="#main_results"><b>Jailbreak attacks</b></a>-->
+          <p>Therefore, we need to internally evaluate whether these unlearning methods <b>truly erase the knowledge within LLM</b>, or merely <b>superficial</b>? From the parameters-based evaluation, we are able to cover more possibilites and evalute unlearning more thoroughly.</p>
+
+<!--          What's more, exising Unlearning mostly are based on Finetuning,-->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3" id="privacy-auditing">Auditing machine unlearning with Min-K% Prob</h2>
-        <div class="content has-text-justified">
-          <p>
-            <strong>Machine Unlearning</strong><br>
-            <a href="https://www.microsoft.com/en-us/research/project/physics-of-agi/articles/whos-harry-potter-making-llms-forget-2/"> Recent work from MSR </a> shows how LLMs can unlearn copyrighted training data via strategic fine-tuning.
-            They made Llama2-7B-chat unlearn the entire Harry Potter magical world and released it as
-            <a href="https://huggingface.co/microsoft/Llama2-7b-WhoIsHarryPotter">Llama2-7B-WhoIsHarryPotter</a> for
-            scrutiny.
-            But with our Min-K% Prob technique, we've found that some “magical traces” still remain, producing Harry
-            Potter content! 🧙‍♂️🔮
-          </p>
-          <p>
-            <img src="./static/images/unlearning_concept_vectors_v3.png"
-              alt="Graph depicting the process of unlearning Harry Potter content">
-          </p>
-          <p>
-            <strong> Auditing machine unlearning with Min-K% Prob </strong> <br>
-            The unlearned model LLaMA2-7B-WhoIsHarryPotter answers the questions related to Harry
-              Potter correctly. We manually cross-checked these responses against the Harry Potter book series
-            for verification.<br>
-            <img src="./static/images/unlearn_result.png" alt="Results showing the unlearned model's responses">
           </p>
         </div>
       </div>
@@ -343,200 +238,128 @@
 </section>
 
 
-
-
-<section class="section">
+  <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <!-- <h2 class="title is-3" id="copyrighted-detection">Copyrighted Book Detection</h2> -->
-        <h2 class="title is-3" id="copyrighted-detection">Detecting Copyrighted Books in LLMs with Min-K% Prob</h2>
-        <div class="content has-text-justified">
+<!--      <div class="column is-fifths-fifths-desktop is-two-thirds-widescreen">-->
+      <div class="column is-five-fifths">
+        <h2 class="title is-3" style="color: #0000a1;">What we do for a better and more thorough evaluation?</h2>
+        <div class="content has-text-justified" style="font-size: 20px; color: #000000">
+          <p>
 
-        <!-- <title>Top 20 Copyrighted Books in GPT-3's (text-davinci-003) Pretraining Data detected by Min-K% Prob</title> -->
-        <style>
-          table {
-            width: 100%;
-            border-collapse: collapse;
-          }
+            Based on the above motivation, we found the existence of parametric “<b>Concept Vector</b>”, also named "<b>knowledge traces</b>".
 
-          table,
-          th,
-          td {
-            border: 1px solid black;
-          }
+            These are specific sets of parameters that strongly correlate with the information to be erased. More specifically, they are the parameters of certain dimensions in the final layer of the MLP modules in the LLM.
 
-          th,
-          td {
-            padding: 8px;
-            text-align: left;
-          }
+            </p>
+          <p>
+          We found that these <a href="#examplevectors">concept vectors</a> have a crucial role in the storage of this corresponding knowledge, which can greatly influence the generation of certain concept knowledge and is causally related to unlearning.
+            But current evaluations of unlearning methods do not monitor these internal information that encoded in model's paramters encodes about the concept.
+            We argue that internal erasure of the concept should be a real goal of unlearning methods.
+            Based on these thinkings, we create <a href="#conceptvectors">ConceptVectors Benchmark</a>, which is used for more thoroughly evaluating the unlearning menthods internally. (see next section)
+          </p>
 
-          th {
-            background-color: #f2f2f2;
-          }
-        </style>
-      </head>
 
-      <body>
+          </p>
+          <img src="./static/images/unlearning_concept_vectors_v3.png" alt="teaser">
+<!--          <em>How Concept Vector works.</em>-->
+          <p style="text-align: center;"><em>How Concept Vector works.</em></p>
 
-        <table>
-          <caption><b style="color: red;">Top 20 Copyrighted Books in GPT-3's pretraining data (text-davinci-003) detected by Min-K%
-            Prob</b> (Min-K% Prob achieves AUC score of 0.87 on the validation data). The listed contamination rate represents the
-            percentage of text excerpts from each book identified in the pretraining data.</caption>
-          <thead>
-            <tr>
-              <th>Contamination %</th>
-              <th>Book Title</th>
-              <th>Author</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>100</td>
-              <td>The Violin of Auschwitz</td>
-              <td>Maria Àngels Anglada</td>
-              <td>2010</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>North American Stadiums</td>
-              <td>Grady Chambers</td>
-              <td>2018</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>White Chappell Scarlet Tracings</td>
-              <td>Iain Sinclair</td>
-              <td>1987</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>Lost and Found</td>
-              <td>Alan Dean</td>
-              <td>2001</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>A Different City</td>
-              <td>Tanith Lee</td>
-              <td>2015</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>Our Lady of the Forest</td>
-              <td>David Guterson</td>
-              <td>2003</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>The Expelled</td>
-              <td>Mois Benarroch</td>
-              <td>2013</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Blood Cursed</td>
-              <td>Archer Alex</td>
-              <td>2013</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Genesis Code: A Thriller of the Near Future</td>
-              <td>Jamie Metzl</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Sleepwalker's Guide to Dancing</td>
-              <td>Mira Jacob</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Harlan Ellison Hornbook</td>
-              <td>Harlan Ellison</td>
-              <td>1990</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Book of Freedom</td>
-              <td>Paul Selig</td>
-              <td>2018</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Three Strong Women</td>
-              <td>Marie NDiaye</td>
-              <td>2009</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Leadership Mind Switch: Rethinking How We Lead in the New World of Work</td>
-              <td>D. A. Benton, Kylie Wright-Ford</td>
-              <td>2017</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Gold</td>
-              <td>Chris Cleave</td>
-              <td>2012</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Tower</td>
-              <td>Simon Clark</td>
-              <td>2005</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Amazon</td>
-              <td>Bruce Parry</td>
-              <td>2009</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Ain't It Time We Said Goodbye: The Rolling Stones on the Road to Exile</td>
-              <td>Robert Greenfield</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Page One</td>
-              <td>David Folkenflik</td>
-              <td>2011</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Road of Bones: The Siege of Kohima 1944</td>
-              <td>Fergal Keane</td>
-              <td>2010</td>
-            </tr>
-          </tbody>
-        </table>
 
-      </body>
-
-      </html>
-
+          <img id="examplevectors" src="./static/images/llama_example.png" alt="teaser">
+          <img src="./static/images/olmo_example.png" alt="teaser">
+<!--          <em>How Concept Vector works.</em>-->
+          <p style="text-align: center;"><em>Examples for ConceptVectors</em></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+<!--      <div class="column is-fifths-fifths-desktop is-two-thirds-widescreen">-->
+      <div class="column is-five-fifths">
+        <h2 id="conceptvectors" class="title is-3" style="color: #0000a1;">How we construct our benchmark?</h2>
+        <div class="content has-text-justified" style="font-size: 20px; color: #000000">
+          <p>
+          We propose <b>ConceptVectors Benchmark</b>, a benchmark dataset containing hundreds of common concepts and their parametric knowledge traces within two open-source LLMs: LLaMA2-7B-chat and OLMo-7B.</b>
+
+          It is the <b>first and preliminary</b> benchmark for internally evaluating unlearning methods.
+
+          ConceptVectors consists of both behavioural evaluation and intrinsic evaluation, which covers
+285 diverse concepts located in different layers in the models.
+          </p>
+          <img src="./static/images/unlearn_data_process.png" alt="teaser">
+          <p style="text-align: center;"><em>How we construct our ConceptVectors benchmark.</em></p>
+
+          <img src="./static/images/types_distribution.png" alt="teaser">
+          <p style="text-align: center;"><em>ConceptVectors Benchmark Types Distribution.</em></p>
+
+          <img src="./static/images/validation.png" alt="teaser">
+          <p style="text-align: center;"><em>Causal Validation Results for Concept Vectors: disrupting the vectors we localize will have a significant impact on the output of target knowledge, while the influence on irrelevant knowledge is minor, demonstrating specificity.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+<!--      <div class="column is-fifths-fifths-desktop is-two-thirds-widescreen">-->
+      <div class="column is-five-fifths">
+        <h2 id="main_results" class="title is-3" style="color: #0000a1;">Main Experiments and Jailbreak Result</h2>
+        <div class="content has-text-justified" style="font-size: 20px; color: #000000">
+          <p>
+
+              Our experiments show that various existing unlearning methods, <b>especially finetuning-based</b> methods <b>fall short at removing parametric knowledge, minimally impact concept vectors</b>, and that it is possible to trigger the model to use these knowledge traces post-unlearning when generating text.
+          </p>
+          <p>
+              But <b>directly ablating these vectors</b> demonstrably removes the associated knowledge from the LLMs and significantly reduces their susceptibility to adversarial manipulation.
+
+            Our results highlight the challenge and importance of erasing learned concepts in LLMs and call for new methods that effectively remove parametric knowledge traces.
+          </p>
+            <!--            But finding all the relevant information is hard, we leverage the existence of some of this knowledge to evaluate unlearning-->
+
+<!--          Evaluation on ConceptVectors shows that existing unlearning methods minimally impact concept vectors, while directly ablating these vectors demonstrably removes the associated knowledge from the LLMs and significantly reduces their susceptibility to adversarial manipulation. Our results highlight limitations in behavioral-based unlearning evaluations and call for future work to include parametric-based evaluations.-->
+
+           <img src="./static/images/jailbreak_results.png" alt="teaser">
+          <p style="text-align: center;"><em>Results on Jailbreak Experiments: Needle is the baseline we propose that directly ablating these concept vectors, which demonstrates better performance in <b>thoroughly unlearning target knowledge</b> while <b>preserving the model's general abilities</b>.</a></em></p>
+        </div>
+          <img src="./static/images/jailbreak_output.png" alt="teaser">
+          <p style="text-align: center;"><em>Jailbreak attacks examples on the unlearned model trained under Gradient Difference or Needle. Gradient Difference is a stable-performing finetuning-based method and Needle is an oracle baseline we proposed which only train on concept vectors. The resuls shows that existing finetuning-based methods on LM's all parameters can not guard against jailbreak attacks.<a href="https://arxiv.org/abs/2406.11614" target="_blank">See more results in our paper</a></em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 
       <section class="section is-light" id="BibTeX">
         <div class="container is-max-desktop content">
-          <h2 class="title">BibTeX</h2>
-          <pre><code>
-@misc{shi2023detecting,
-title={Detecting Pretraining Data from Large Language Models},
-author={Weijia Shi and Anirudh Ajith and Mengzhou Xia and Yangsibo Huang and Daogao Liu and Terra Blevins and Danqi Chen
-and Luke Zettlemoyer},
-year={2023},
-eprint={2310.16789},
-archivePrefix={arXiv},
-primaryClass={cs.CL}
+          <h2 class="title">How to Cite</h2>
+          <pre><code>@misc{hong2024intrinsic,
+      title={Intrinsic Evaluation of Unlearning Using Parametric Knowledge Traces},
+      author={Yihuai Hong and Lei Yu and Shauli Ravfogel and Haiqin Yang and Mor Geva},
+      year={2024},
+      eprint={2406.11614},
+      archivePrefix={arXiv},
+      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 </code></pre>
         </div>
@@ -544,28 +367,6 @@ primaryClass={cs.CL}
 
 
 
-      <footer class="footer">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-8">
-              <div class="content">
-                <p>
-                  This website is licensed under a <a rel="license"
-                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                    Commons Attribution-ShareAlike 4.0 International License</a>.
-                </p>
-                <p>
-                  This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
-                    code</a> of this website,
-                  we just ask that you link back to this page in the footer.
-                  Please remember to remove the analytics code included in the header of the website which
-                  you do not want on your website.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
 
 </body>
 
