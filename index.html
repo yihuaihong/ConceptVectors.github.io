@@ -100,39 +100,39 @@
         <div class="columns is-centered">
           <div class="column has-text-left">
             <h1 class="title is-1 publication-title"  style="font-weight: bold;"  >
-<!--              <span class="big-emoji">🌌</span>-->
+              <span class="big-emoji">🌌</span>
               ConceptVectors Benchmark
             </h1>
             <div class="is-size-5">
               <div class="column has-text-centered">
             <h1 class="title is-3 paper-title">
-              Paper: Intrinsic Evaluation of Unlearning Using Parametric Knowledge Traces
+              Intrinsic Evaluation of Unlearning Using Parametric Knowledge Traces
             </h1>
             <div class="is-size-5">
               <span class="author-block">
-                <a href="http://yihuaihong.github.io" style="color:#000000;font-weight:600;">Yihuai Hong</a><sup>1</sup>,
+                <a href="http://yihuaihong.github.io" style="color:#000000;font-weight:600;">  Yihuai Hong</a><sup>1</sup>
               </span>
               <span class="author-block">
-                <a href="https://jadeleiyu.github.io/" style="color:#000000;font-weight:600;">Lei Yu</a><sup>2</sup>,
+                <a href="https://jadeleiyu.github.io/" style="color:#000000;font-weight:600;">&nbsp;Lei Yu</a><sup>2</sup>
               </span>
               <span class="author-block">
-                <a href="https://shauli-ravfogel.netlify.app/" style="color:#000000;font-weight:600;">Shauli Ravfogel</a><sup>3</sup>,
+                <a href="https://shauli-ravfogel.netlify.app/" style="color:#000000;font-weight:600;">&nbsp;Shauli Ravfogel</a><sup>3</sup>
               </span>
               <span class="author-block">
-                <a href="https://hqyang.github.io/" style="color:#000000;font-weight:600;">Haiqin Yang</a><sup>4</sup>,
+                <a href="https://hqyang.github.io/" style="color:#000000;font-weight:600;">&nbsp;Haiqin Yang</a><sup>4</sup>
               </span>
               <span class="author-block">
-                <a href="https://mega002.github.io/" style="color:#000000;font-weight:600;">Mor Geva<sup>#</sup></a><sup>5</sup>
+                <a href="https://mega002.github.io/" style="color:#000000;font-weight:600;">&nbsp;Mor Geva</a><sup>5</sup>
               </span>
             </div>
   
             <br>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">South China University of Technology<sup>1</sup>, </span>
-              <span class="author-block">University of Toronto<sup>2</sup>, </span>
-              <span class="author-block">Bar-Ilan University<sup>3</sup>, </span>
-              <span class="author-block">IDEA, China<sup>4</sup>, </span>
-              <span class="author-block">Tel Aviv University<sup>5</sup></span>
+              <span class="author-block"><sup>1</sup>South China University of Technology, </span>
+              <span class="author-block"><sup>2</sup>University of Toronto, </span>
+              <span class="author-block"><sup>3</sup>Bar-Ilan University, </span>
+              <span class="author-block"><sup>4</sup>IDEA, China, </span>
+              <span class="author-block"><sup>5</sup>Tel Aviv University</span>
 <!--              <br><sup>#</sup>Corresponding Author</span>-->
             </div>
 
@@ -189,9 +189,12 @@
         <h2 class="title is-3" style="color: #0000a1;">Why we need LLM Unlearning?</h2>
         <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
-            Large language models, due to their extensive pre-training corpora, often inadvertently learn <b>harmful, sensitive, or copyright-protected knowledge</b>.
-            So recently there has been surging interest in developing methods for unlearning these knowledge captured in LLM as a <b>post-pretraining technique</b> for satety. Like:
+            Large language models, are trained in an unsupervised manner on extensive pre-training corpora, which might inadvertently result in the encoding of <b>harmful, sensitive, or copyright-protected knowledge</b>.
+
+            So recently there has been surging interest in developing methods for post-training unlearning of these target knowledge captured in LLM for satety.
+
           </p>
+          Like:
           <li><b>Copyright-protected IP:</b> Harry Potter<span style="font-size: 24px;">🧙‍</span>, Star Wars<span style="font-size: 24px;">🌌‍</span>, Final Fantasy VII<span style="font-size: 24px;">🗡‍</span>
 
           <li><b>Harmful Statements:</b> How to make a bomb<span style="font-size: 24px;">💣‍</span>?
@@ -225,7 +228,7 @@
 
           A well-performing unlearning method in these tests may still generate the unlearned information post-unlearning under strong adversarial attacks, such as <b>Jailbreak attacks</b>, also indicating that in practice certain knowledge has not been removed from the model.
 <!--<a href="#main_results"><b>Jailbreak attacks</b></a>-->
-          <p>Therefore, we need to internally evaluate whether these unlearning methods <b>truly erase the knowledge within LLM</b>, or merely <b>superficial</b>? From the parameters-based evaluation, we are able to cover more possibilites and evalute unlearning more thoroughly.</p>
+          <p>Therefore, we need to internally evaluate whether these unlearning methods <b>truly erase the knowledge within LLM</b>, or merely modify the model's behavior? From the parameters-based evaluation, we are able to cover more possibilites and evalute unlearning more thoroughly.</p>
 
 <!--          What's more, exising Unlearning mostly are based on Finetuning,-->
 
@@ -289,7 +292,7 @@
           <p>
           We propose <b>ConceptVectors Benchmark</b>, a benchmark dataset containing hundreds of common concepts and their parametric knowledge traces within two open-source LLMs: LLaMA2-7B-chat and OLMo-7B.</b>
 
-          It is the <b>first and preliminary</b> benchmark for internally evaluating unlearning methods.
+          It is the <b>first and preliminary</b> benchmark for <b>internally evaluating unlearning methods</b>, and assessing the <b>residual knowledge inherently brought by LLM's pretraining</b>.
 
           ConceptVectors consists of both behavioural evaluation and intrinsic evaluation, which covers
 285 diverse concepts located in different layers in the models.
@@ -322,7 +325,8 @@
         <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
 
-              Our experiments show that various existing unlearning methods, <b>especially finetuning-based</b> methods <b>fall short at removing parametric knowledge, minimally impact concept vectors</b>, and that it is possible to trigger the model to use these knowledge traces post-unlearning when generating text.
+              Our experiments show that various existing unlearning methods, <b>especially finetuning-based</b> methods <b>fall short at removing parametric knowledge, minimally impact concept vectors</b>. The residual knowledge traces, then, can be used to elicit the model to express knowledge of the supposedly erased concept.
+
           </p>
           <p>
               But <b>directly ablating these vectors</b> demonstrably removes the associated knowledge from the LLMs and significantly reduces their susceptibility to adversarial manipulation.
@@ -335,9 +339,9 @@
 
            <img src="./static/images/jailbreak_results.png" alt="teaser">
           <p style="text-align: center;"><em>Results on Jailbreak Experiments: Needle is the baseline we propose that directly ablating these concept vectors, which demonstrates better performance in <b>thoroughly unlearning target knowledge</b> while <b>preserving the model's general abilities</b>.</a></em></p>
-        </div>
+
           <img src="./static/images/jailbreak_output.png" alt="teaser">
-          <p style="text-align: center;"><em>Jailbreak attacks examples on the unlearned model trained under Gradient Difference or Needle. Gradient Difference is a stable-performing finetuning-based method and Needle is an oracle baseline we proposed which only train on concept vectors. The resuls shows that existing finetuning-based methods on LM's all parameters can not guard against jailbreak attacks.<a href="https://arxiv.org/abs/2406.11614" target="_blank">See more results in our paper</a></em></p>
+          <p style="text-align: center;"><em>Jailbreak attacks examples on the unlearned model trained under Gradient Difference or Needle. Gradient Difference is a stable-performing finetuning-based method and Needle is an oracle baseline we proposed which only train on concept vectors. The resuls shows that existing finetuning-based methods on LM's all parameters can not guard against jailbreak attacks. <a href="https://arxiv.org/abs/2406.11614" target="_blank">See more results in our paper</a> </em></p>
         </div>
       </div>
     </div>
