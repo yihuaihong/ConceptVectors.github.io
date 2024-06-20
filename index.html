@@ -189,9 +189,12 @@
         <h2 class="title is-3" style="color: #0000a1;">Why we need LLM Unlearning?</h2>
         <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
-            Large language models, due to their extensive pre-training corpora, often inadvertently learn <b>harmful, sensitive, or copyright-protected knowledge</b>.
-            So recently there has been surging interest in developing methods for unlearning these knowledge captured in LLM as a <b>post-pretraining technique</b> for satety. Like:
+            Large language models, are trained in an unsupervised manner on extensive pre-training corpora, which might inadvertently result in the encoding of <b>harmful, sensitive, or copyright-protected knowledge</b>.
+
+            So recently there has been surging interest in developing methods for post-training unlearning of these target knowledge captured in LLM for satety.
+
           </p>
+          Like:
           <li><b>Copyright-protected IP:</b> Harry Potter<span style="font-size: 24px;">🧙‍</span>, Star Wars<span style="font-size: 24px;">🌌‍</span>, Final Fantasy VII<span style="font-size: 24px;">🗡‍</span>
 
           <li><b>Harmful Statements:</b> How to make a bomb<span style="font-size: 24px;">💣‍</span>?
@@ -225,7 +228,7 @@
 
           A well-performing unlearning method in these tests may still generate the unlearned information post-unlearning under strong adversarial attacks, such as <b>Jailbreak attacks</b>, also indicating that in practice certain knowledge has not been removed from the model.
 <!--<a href="#main_results"><b>Jailbreak attacks</b></a>-->
-          <p>Therefore, we need to internally evaluate whether these unlearning methods <b>truly erase the knowledge within LLM</b>, or merely <b>superficial</b>? From the parameters-based evaluation, we are able to cover more possibilites and evalute unlearning more thoroughly.</p>
+          <p>Therefore, we need to internally evaluate whether these unlearning methods <b>truly erase the knowledge within LLM</b>, or merely modify the model's behavior? From the parameters-based evaluation, we are able to cover more possibilites and evalute unlearning more thoroughly.</p>
 
 <!--          What's more, exising Unlearning mostly are based on Finetuning,-->
 
@@ -322,7 +325,8 @@
         <div class="content has-text-justified" style="font-size: 20px; color: #000000">
           <p>
 
-              Our experiments show that various existing unlearning methods, <b>especially finetuning-based</b> methods <b>fall short at removing parametric knowledge, minimally impact concept vectors</b>, and that it is possible to trigger the model to use these knowledge traces post-unlearning when generating text.
+              Our experiments show that various existing unlearning methods, <b>especially finetuning-based</b> methods <b>fall short at removing parametric knowledge, minimally impact concept vectors</b>. The residual knowledge traces, then, can be used to elicit the model to express knowledge of the supposedly erased concept.
+
           </p>
           <p>
               But <b>directly ablating these vectors</b> demonstrably removes the associated knowledge from the LLMs and significantly reduces their susceptibility to adversarial manipulation.
